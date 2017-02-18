@@ -1,11 +1,11 @@
 # Site settings
-title: Emerald | A simple Jekyll blog
-description: "A minimal blog template, build with Jekyll."
-url: "http://www.jacoporabolini.com/emerald"
+title: VikiScripts | A Scripting Repository
+description: "Collection of System Admin Scripts Written in VbScript and PowerShell."
+url: "http://vikiscripts.github.io"
 author:
-  name: "Jacopo Rabolini"
-  email: "hello@jacoporabolini.com"
-  url: "http://www.jacoporabolini.com"
+  name: "Vikas Pandey"
+  email: "vikiscripts@gmail.com"
+  url: "http://vikiscripts.github.io"
 
 # Build settings
 baseurl: /MyTestBlog/ # Change this to your relative path (ex: /blog/), or leave just a /
@@ -29,6 +29,6 @@ defaults:
 version: "1.1.0"
 
 # Options
-custom_header: false
+custom_header: true
 custom_nav_footer: false
 reverse: false
