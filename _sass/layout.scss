@@ -113,9 +113,8 @@
 
 #container {
 	margin:0 auto;
-	/* max-width: 730px; */
-	max-width: 1000px;
-	padding: 0 1.5rem;
+	max-width: 730px;
+	/* padding: 0 1.5rem; */
 }
 
 #header {
@@ -209,7 +208,7 @@ code {
 
 .content ul, .content ol {
   line-height: 1.5em; /* 24px/16px */
-  padding-left: 1.5em;
+  /* padding-left: 1.5em; VIK*/
   @media (min-width: 940px) {
     line-height: 1.33334em; /* 24px/18px */
   }
