@@ -34,7 +34,7 @@ function ToggleDiv(id) {
 
 	  <li class="post">
 	  	<!-- <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3> -->
-		<textarea rows="1" cols="70" readonly="" class="success">{{ post.title }}</textarea>
+		<textarea rows="1" cols="100" readonly="" class="success">{{ post.title }}</textarea>
 		<!--<button class="button" onclick="window.location.href='{{ site.baseurl }}{{ post.url }}'">Show/hide Script</button> -->
 		<button class="button" onclick="ToggleDiv('{{ post.title }}')">Show/hide Script</button>
 		<div class="mygist-long" id="{{ post.title }}" style="display:none;">{{post.content}}</div>
