@@ -9,7 +9,7 @@ layout: default
 	  <li class="post">
 	  	<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
 		<textarea rows="1" cols="100" readonly="" class="success">{{ post.title }}</textarea>
-	  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+	  	<!-- <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time> -->
 	  </li>
 
     {% endfor %}
