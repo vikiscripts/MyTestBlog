@@ -20,8 +20,9 @@ layout: default
 	  <li class="post">
 	  	<!-- <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3> -->
 		<textarea rows="1" cols="70" readonly="" class="success">{{ post.title }}</textarea>
-		<button class="button" onclick="window.location.href='{{ site.baseurl }}{{ post.url }}'">Show/hide Script</button>
-		  <div>{{post.content}}</div>
+		<!--<button class="button" onclick="window.location.href='{{ site.baseurl }}{{ post.url }}'">Show/hide Script</button> -->
+		<button class="button" onclick="ToggleDiv('mygist001')">Show/hide Script</button>
+		<div>{{post.content}}</div>
 	  	<!-- <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time> -->
 	  </li>
 
