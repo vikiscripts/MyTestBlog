@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+<script>
+function ToggleDiv(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === 'none') {
+         x.style.display = 'block';
+    	} else {
+          x.style.display = 'none';
+    	}
+}
+</script>
 <style>
 .success {
     background-color: #ddffdd;
@@ -10,6 +20,11 @@ layout: default
 }
 .button{
   position: absolute;
+}
+
+.mygist-long {
+    width: 1100px;
+    margin: auto;
 }
 </style>
 <!-- Posts -->
@@ -21,8 +36,8 @@ layout: default
 	  	<!-- <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3> -->
 		<textarea rows="1" cols="70" readonly="" class="success">{{ post.title }}</textarea>
 		<!--<button class="button" onclick="window.location.href='{{ site.baseurl }}{{ post.url }}'">Show/hide Script</button> -->
-		<button class="button" onclick="ToggleDiv('mygist001')">Show/hide Script</button>
-		<div>{{post.content}}</div>
+		<button class="button" onclick="ToggleDiv('{{ post.title }}')">Show/hide Script</button>
+		<div class="mygist-long" id="{{ post.title }}" style="display:none;">{{post.content}}</div>
 	  	<!-- <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time> -->
 	  </li>
 
