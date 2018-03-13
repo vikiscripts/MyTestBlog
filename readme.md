@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read Me
+title: About VikiScripts Tutorial
 ---
   
   
