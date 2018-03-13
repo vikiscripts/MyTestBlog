@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About VikiScripts Tutorial
+title: Read Me
 ---
   
   
-## About VikiScripts Python Tutorial
+## VikiScripts Python Tutorial
   
   
 
