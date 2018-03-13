@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Python Tutorial by VikiScripts Team
+title: About VikiScripts Tutorial
 ---
 ## About
 
