@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+<link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
+ <style>
+    .exercise {
+      margin: 50px;
+    }
+	
+	.h2{	  
+	  margin-left 100px;	
+	}
+</style>
+
+
+	  <!-- The Below Section is for Python Exercises. Please Reuse the code blocks to add more -->
+
+<!-- Posts -->
+<ul id="posts">
+
+	{% for post in paginator.posts %}
+
+	 <li class="post">
+	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
+	  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+		<div class="exercise">
+	<div class="title">
+		  <h3>Basic Input and Output in Python</h3>
+	</div>
+
+	 <div data-datacamp-exercise data-lang="python" data-height="auto">
+	  <code data-type="pre-exercise-code"></code>
+	  <code data-type="sample-code">		  
+		<p>{{ post.content}}</p>
+	  </code>
+	  <code data-type="solution"></code>
+	  <code data-type="sct"></code>
+	  <div data-type="hint">Just press 'Run'.</div>
+	 </div>
+       </div>
+	  	
+     </li>
+
+     {% endfor %}
+
+</ul>
