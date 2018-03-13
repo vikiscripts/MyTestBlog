@@ -1,6 +1,6 @@
 # Site settings
-title: VikiScripts | A Scripting Repository
-description: "Collection of System Admin Scripts Written in VbScript and PowerShell."
+title: VikiScripts | Python Tutorial
+description: "Python Tutorial by VikiScripts Team"
 url: "http://vikiscripts.github.io"
 author:
   name: "Vikas Pandey"
@@ -31,4 +31,4 @@ version: "1.1.0"
 # Options
 custom_header: true
 custom_nav_footer: false
-reverse: false
+reverse: True
