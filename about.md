@@ -2,7 +2,9 @@
 layout: page
 title: About VikiScripts Tutorial
 ---
-## About
+  
+  
+## About VikiScripts Python Tutorial
 
 This is a Python Tutorial Site designed by VikiScripts team to learning Basic Python Scripting.  
   
