@@ -3,9 +3,15 @@ title: Repeating Code Execution with a Loop
 ---
 #!/usr/bin/python3
 
-#While Loop
+#------ While Loop
+count = 1
+while count <= 10: # Try "while True:" for infinite loop, on your env 
+    print("Love you Python!!")
+    count += 1
 
+#------ For Loop 
+#'For Loop' in python is like foreach loop in other languages
 
-
-
-#For Loop
+my_objects = "file", "directory", "process", "service"
+for item in my_objects:
+    print(item)
