@@ -12,9 +12,22 @@ for item in my_server_list:
 
 print("Total Servers: " + str(len(my_server_list)))
 
-# Add one more item
+# Add item(s)
+my_server_list.append("vm10001234")
+print(my_server_list)
 
+my_server_list.extend("vm20001234") # Try ["vm20001234"] 
+print(my_server_list)
 
+my_server_list.insert(2, "vm20001234")
+print(my_server_list)
+
+# Remove item(s)
+del my_server_list[0]
+print(my_server_list)
+
+my_server_list.pop() #try pop(2)
+print(my_server_list)
 
 #----------- Dictionary
 
