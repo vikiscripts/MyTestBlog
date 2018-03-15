@@ -17,3 +17,20 @@ print(my_server_tuple)
 my_vm_config = {"hostname": "vm00002314", "mgmt_ip": "192.169.3.12", "domain": "vikiscripts.github.io" }
 print(my_vm_config)
 print(my_vm_config["mgmt_ip"])
+
+
+my_vm_config = [{
+                "hostname": "vm00002314",
+                "pvt_ip": "10.48.3.12", 
+                "domain": "vikiscripts.github.io" 
+                "network_config": {
+                                    "mgmt_ip": "192.169.3.12"
+                                    "vnet": "vnet1"
+                                    "nic" : 2
+                                  }
+               }]
+               
+               
+print(my_vm_config)
+print(my_vm_config["pvt_ip"])
+print(my_vm_config["network_config"])
