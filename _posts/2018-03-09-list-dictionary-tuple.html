@@ -31,6 +31,15 @@ print(my_server_list)
 my_server_list.pop() #try pop(2)
 print(my_server_list)
 
+# List may contain another List as its element
+
+my_config_list = ["vm00001234", "vm00002534", "vm00004567", "vm00006969", ["Linux", "Windows", "Mac"], ["192.169.0.1", "192.169.0.2", "192.169.0.3"]]
+
+print(my_config_list)
+print(my_config_list[4])
+print(my_config_list[5][1])
+
+
 #----------- Dictionary
 
 my_vm_config = {}
