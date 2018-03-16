@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+### PLEASE EXECUTE IT ON YOUR LOCAL ENV
+
+import json, requests, sys, urllib
+
+# Input Values
+location = raw_input("Please Enter a valid City..")
+base_uri = "http://api.openweathermap.org/data/2.5/weather?q=%s" % (location)
+key = 'f1a52e0d2011b0b4f042744e05ce2498'
+
+url = base_uri + '&APPID=' + key
+api_response = urllib.urlopen(url)
+
+# Recieve the response and load it as json
+jsonRaw = api_response.read()
+diction = json.loads(jsonRaw)
+
+# Parse the needed information
+city = diction["name"]
+lat=diction["coord"]["lat"]
+lon=diction["coord"]["lon"]
+ctemp = float(diction["main"]["temp"])
+tempmax = float(diction["main"]["temp_max"])
+tempmin = float(diction["main"]["temp_min"])
+
+# output section
+print("City name you selected is : " + city)
+print('\n')
+print ('*******Coordinates of %s*******') %(location)
+print("Latitude is ....." + lat)
+print("Longitude is ....." + lon)
+print('\n')
+print ('*******TEMPERATURE DETAILS*******')
+print ("Current temperature is ....." + ctemp + " 'In Kelvin'")
+print ("Max temperature is ....." + tempmax + " 'In Kelvin'")
+print ("Min temperature is ....." + tempmin + " 'In Kelvin'")
