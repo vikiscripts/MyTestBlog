@@ -18,3 +18,19 @@ def checking_root():
         pass
 
 checking_root()
+
+#---------------  generate random password
+
+import os,random,string 
+
+def generate_random_password():
+    rPassword="" 
+    length = 9 
+    chars = string.ascii_letters + "!@#$%^&*()" 
+    suffix = string.digits 
+    random.seed = (os.urandom(1024)) 
+    rPassword = ''.join(random.choice(chars) for i in range(5)) + '@' + ''.join(random.choice(suffix) for j in range(3))
+    print("RandomPassword=%s" % rPassword)
+    
+
+generate_random_password()
