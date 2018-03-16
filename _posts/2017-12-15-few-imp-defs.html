@@ -1,7 +1,7 @@
 ---
 title: Few Important Functions or Defs
 ---
-import urllib3
+import urllib3, os, sys
 
 #Get Member of any Imported module
 def get_member(module_name):
@@ -9,3 +9,12 @@ def get_member(module_name):
         print(i)
 
 get_member(urllib3)
+
+def checking_root():
+    if ( os.getuid() != 0 ):
+        print ("[!]The Script should be run as root")
+        sys.exit()
+    else:
+        pass
+
+checking_root()
