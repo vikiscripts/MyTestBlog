@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92396414-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+<link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
+
+<!--
+ <style>
+    .exercise {
+      margin: 50px;
+    
+	
+	.h2{	  
+	  margin-left 100px;	
+	}
+</style> -->
+
+
+	  <!-- The Below Section is for Python Exercises. Please Reuse the code blocks to add more -->
+
+<!-- Posts -->
+<ul id="posts">
+
+	{% for post in paginator.posts %}
+
+	 <li class="post">
+	  	<!-- <h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2> VIK:-->
+	<div class="exercise">
+	<div class="title">
+		  <h3>{{ post.title }}</h3>
+		  <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+	</div>
+
+	 <div data-datacamp-exercise data-lang="python" data-height="300px">
+	  <code data-type="pre-exercise-code"></code>
+		 
+	  <code data-type="sample-code">{{ post.content}}</code>
+		 
+	  <code data-type="solution">Ask Vikas</code>
+	  <code data-type="sct"></code>
+	  <div data-type="hint">Just press 'Run'.</div>
+	 </div>
+       </div>
+	  	
+     </li>
+
+     {% endfor %}
+
+</ul>
