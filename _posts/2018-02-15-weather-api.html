@@ -1,39 +1,42 @@
 ---
 title: Weather Api Example
 ---
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 ### PLEASE EXECUTE IT ON YOUR LOCAL ENV
 
-import json, requests, sys, urllib
-print '\n'
+import json, sys, urllib
+
+# Input Values
 location = raw_input("Please Enter a valid City..")
-print '\n'
 base_uri = "http://api.openweathermap.org/data/2.5/weather?q=%s" % (location)
 key = 'f1a52e0d2011b0b4f042744e05ce2498'
+
 url = base_uri + '&APPID=' + key
 api_response = urllib.urlopen(url)
+
+# Recieve the response and load it as json
 jsonRaw = api_response.read()
 diction = json.loads(jsonRaw)
+
+# Parse the needed information
 city = diction["name"]
-print("City name you selected is : " + city)
-print '\n'
-print ('*******Coordinates of %s*******') %(location)
 lat=diction["coord"]["lat"]
 lon=diction["coord"]["lon"]
-print("Latitude is .....")
-print(lat)
-print("Longitude is .....")
-print(lon)
-print '\n'
-print ('*******TEMPERATURE DETAILS*******')
 ctemp = float(diction["main"]["temp"])
-print ("Current temperature is .....")
-print (ctemp, 'In Kelvin')
 tempmax = float(diction["main"]["temp_max"])
-print ("Max temperature is .....")
-print (tempmax, 'In Kelvin')
 tempmin = float(diction["main"]["temp_min"])
-print ("Min temperature is .....")
-print (tempmin, 'In Kelvin')
-print '\n'
+
+# output section
+print("City name you selected is : " + city)
+print('\n')
+print ('-------Coordinates of %s----------') %(location)
+print("Latitude :\t" + str(lat))
+print("Longitude :\t" + str(lon))
+print('\n')
+print ('-------TEMPERATURE DETAILS---------')
+print ("Current temperature :\t" + str(ctemp) + " 'In Kelvin'")
+print ("Max temperature :\t" + str(tempmax) + " 'In Kelvin'")
+print ("Min temperature :\t" + str(tempmin) + " 'In Kelvin'")
+
+
