@@ -13,18 +13,6 @@ layout: default
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 <link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
 
-<!--
- <style>
-    .exercise {
-      margin: 50px;
-    
-	
-	.h2{	  
-	  margin-left 100px;	
-	}
-</style> -->
-
-
 	  <!-- The Below Section is for Python Exercises. Please Reuse the code blocks to add more -->
 
 <!-- Posts -->
@@ -36,7 +24,7 @@ layout: default
 	  	<!-- <h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2> VIK:-->
 	<div class="exercise">
 	<div class="title">
-		  <h3>{{ post.title }}</h3>
+		  <h4>{{ post.title }}</h4>
 		  <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
 	</div>
 
