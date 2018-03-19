@@ -1,0 +1,32 @@
+---
+title: Writing your own class
+---
+
+### DO NOT TEST HERE.
+
+#!/usr/bin/python
+
+import os, sys
+
+class fileops:
+	def get_content(self, file_path):
+		if os.path.exists(file_path):
+			file = open(file_path, "r")
+			return file.read()
+		else:
+			return "File not found"
+	def out_file(self, file_path, msg):
+		if os.path.exists(file_path):
+			file = open(file_path, "w")
+			file.write(msg)
+                        file.close()
+		else:
+			return "File not found. Creating Now"
+
+ofile = fileops()
+
+print ofile.get_content("./somefile_r.txt")
+
+ofile.out_file("./somefile_w.txt", "Hello Mr Chaplin")
+
+print ofile.get_content("./somefile_w.txt")
