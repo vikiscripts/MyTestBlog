@@ -3,6 +3,12 @@ title: Scripting My Server
 ---
 #------ What Modules I need ?
 
+import os
+#import commands
+import sys
+import subprocess
+import csv
+
 #------ How to interact with my server/os/system ?
 
 #------ How to read file data ?
@@ -10,3 +16,17 @@ title: Scripting My Server
 #------ How to read from csv ?
 
 #------ How to run native shell commands ?
+
+#------ What Modules I need ?
+
+# os Module
+output = os.system("ls -l")
+print(output)
+
+# subprocess module
+output = subprocess.Popen(['ls', '-a'], stdout=subprocess.PIPE)
+print(output.communicate())
+
+# commands module : You might find on internet blogs. its a wrapper on os module and not a recommended method.
+output = commands.getoutput("ls -l")
+print(output)
